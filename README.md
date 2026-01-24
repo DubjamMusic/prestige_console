@@ -8,6 +8,15 @@ This project shows how to integrate a Next.js application with the ChatGPT Apps 
 
 ## Key Components
 
+### Ecosystem integration
+
+This starter is already wired for the broader ChatGPT Apps + MCP ecosystem:
+- **MCP server** is exposed at `/mcp` with tool and resource metadata that matches the OpenAI Apps SDK requirements.
+- **Asset prefixing** in `next.config.ts` and `baseUrl.ts` keeps static assets resolvable when the app is rendered inside ChatGPT iframes.
+- **CORS middleware** in `middleware.ts` ensures cross-origin RSC fetching works when ChatGPT requests pages or resources.
+- **SDK bootstrap** in `app/layout.tsx` patches browser APIs (history, fetch) so widget navigation and hydration behave correctly in ChatGPT.
+- **Widget metadata** is set via `_meta` fields in `app/mcp/route.ts` so ChatGPT can render widgets with loading states, borders, and domain restrictions.
+
 ### 1. MCP Server Route (`app/mcp/route.ts`)
 
 The core MCP server implementation that exposes tools and resources to ChatGPT.
