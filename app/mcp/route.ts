@@ -69,33 +69,28 @@ const handler = createMcpHandler(async (server) => {
     })
   );
 
-  server.registerTool(
-    contentWidget.id,
-    {
-      title: contentWidget.title,
-      description:
-        "Fetch and display the homepage content with the name of the user",
-      inputSchema: {
-        name: z.string().describe("The name of the user to display on the homepage"),
+  (server as any).registerTool(contentWidget.id, {
+    title: contentWidget.title,
+    description:
+      "Fetch and display the homepage content with the name of the user",
+    inputSchema: {
+      name: z.string().describe("The name of the user to display on the homepage"),
+    },
+    _meta: widgetMeta(contentWidget),
+    execute: async ({ name }: { name: string }) => ({
+      content: [
+        {
+          type: "text",
+          text: name,
+        },
+      ],
+      structuredContent: {
+        name: name,
+        timestamp: new Date().toISOString(),
       },
       _meta: widgetMeta(contentWidget),
-    },
-    async ({ name }) => {
-      return {
-        content: [
-          {
-            type: "text",
-            text: name,
-          },
-        ],
-        structuredContent: {
-          name: name,
-          timestamp: new Date().toISOString(),
-        },
-        _meta: widgetMeta(contentWidget),
-      };
-    }
-  );
+    }),
+  });
 });
 
 export const GET = handler;
