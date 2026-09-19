@@ -1,0 +1,21 @@
+{
+  "waveId": "2026-09-19-d-lattice",
+  "figureId": "globe-teller",
+  "repo": "DubjamMusic/prestige_console",
+  "mergePolicy": "pr-only",
+  "displayMode": "inline",
+  "scores": {
+    "nodes": 86,
+    "velocity": 74,
+    "streak": 91,
+    "decision": 84
+  },
+  "weights": {
+    "nodes": 1,
+    "velocity": 1,
+    "streak": 1,
+    "decision": 1
+  },
+  "lever": "V",
+  "nextAction": "Review Wave D PRs; do not merge until Chair says merge."
+}
