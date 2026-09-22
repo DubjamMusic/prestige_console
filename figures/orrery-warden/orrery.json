@@ -1,0 +1,13 @@
+{
+  "figureId": "orrery-warden",
+  "codename": "ORRERY-WARDEN-22",
+  "waveId": "2026-09-22-g-cipher",
+  "repo": "DubjamMusic/prestige_console",
+  "role": "Compute a reproducible prestige-density orbit from four levers.",
+  "sample": {"N": 8.0, "V": 7.0, "S": 8.0, "D": 8.0},
+  "weights": {"N": 0.3, "V": 0.2, "S": 0.2, "D": 0.3},
+  "expectedDensity": 7.789,
+  "bannedTokens": ["planner", "executor", "monitor", "data_agent"],
+  "predecessorNotThisWave": "globe-teller",
+  "mergePolicy": "pr-only"
+}
