@@ -1,0 +1,18 @@
+{
+  "figureId": "dial-wright",
+  "codename": "DIAL-WRIGHT-27",
+  "waveId": "2026-09-27-l-spoke",
+  "repo": "DubjamMusic/prestige_console",
+  "role": "Bind a scored density dial so Golden Globe inputs stay testable without a dashboard rewrite.",
+  "knowledge": [
+    "globe-teller and orrery-warden already shipped; this figure owns the dial only",
+    "Dial is a density card, not a new Next.js route",
+    "Auth-token rotation stays on a separate issue"
+  ],
+  "sample": {"N": 7.9, "V": 8.5, "S": 8.2, "D": 7.7},
+  "weights": {"N": 0.30, "V": 0.20, "S": 0.20, "D": 0.30},
+  "expectedDensity": 8.015,
+  "bannedTokens": ["planner", "executor", "monitor", "data_agent"],
+  "predecessorNotThisWave": "orrery-warden",
+  "mergePolicy": "pr-only"
+}
