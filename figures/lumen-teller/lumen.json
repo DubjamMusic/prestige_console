@@ -1,0 +1,19 @@
+{
+  "figureId": "lumen-teller",
+  "codename": "LUMEN-TELLER-30",
+  "waveId": "2026-09-30-o-hearth",
+  "repo": "DubjamMusic/prestige_console",
+  "role": "Bind the prestige lumen as a scored density readout card.",
+  "knowledge": [
+    "Density dial belongs to dial-wright, not this wave",
+    "Orrery belongs to orrery-warden, not this wave",
+    "Globe card belongs to globe-teller, not this wave",
+    "affirmAgent.ts and challengeAgent.ts stay frozen on hustlecodex-platform"
+  ],
+  "sample": {"N": 8.8, "V": 7.0, "S": 8.9, "D": 8.0},
+  "weights": {"N": 0.30, "V": 0.20, "S": 0.20, "D": 0.30},
+  "expectedDensity": 8.188,
+  "bannedTokens": ["planner", "executor", "monitor", "data_agent"],
+  "predecessorNotThisWave": "dial-wright",
+  "mergePolicy": "pr-only"
+}
